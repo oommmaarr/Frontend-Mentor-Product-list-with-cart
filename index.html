@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+  <title>Frontend Mentor | Product list with cart</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="min-h-screen w-full bg-rose-50 font-redhat flex lg:flex-row lg:justify-center lg:items-center lg:mx-auto relative">
+
+  <div class="container mx-auto px-4 flex flex-col xl:flex-row gap-5 items-start">
+    <div class="part1 xl:w-10/12 w-full">
+      <h1 class="font-bold text-4xl 2xl:block w-full 2xl:mb-10 lg:flex lg:justify-center lg:items-center lg:mb-5 md:flex md:justify-center md:items-center xl:text-start text-center 2xl:my-5 2xl:mx-15">
+        Desserts
+      </h1>
+      <div class="cards mt-10 w-full flex flex-wrap gap-5 justify-center xl:justify-start 2xl:grid 2xl:grid-cols-3 xl:grid xl:grid-cols-2 lg:grid lg:grid-cols-2 lg:place-items-center">
+      </div>
+    </div>
+
+    <div class="part2 bg-white p-5 rounded-md xl:w-[450px] lg:w-full md:w-full lg:rounded-l-lg lg:rounded-r-lg xl:flex flex-col 2xl:mr-0 mx-auto w-[280px] mt-10">
+      <h2 class="font-bold text-2xl text-red-700 opacity-80">
+        Your Cart (<span class="CountCart">0</span>)
+      </h2>
+
+      <div class="flex flex-col items-center justify-center mt-5 CartBox">
+        <img src="./assets/images/illustration-empty-cart.svg" alt="illustration-empty-cart.svg" />
+        <p class="text-sm mt-2 text-rose-950">Your added items will appear here</p>
+      </div>
+
+      <div class="allItems">
+        <div class="hidden ListItem"></div>
+      </div>
+
+      <div class="OrderTotal hidden">
+        <div class="flex justify-between mt-5 items-center">
+          <p class="font-semibold 2xl:text-lg text-sm opacity-70">Order Total</p>
+          <p class="font-bold 2xl:text-2xl text-lg OrderTotal2"></p>
+        </div>
+
+        <div class="delivery flex bg-rose-50 items-center justify-center p-3 rounded-lg mt-5 2xl:gap-x-1 gap-x-3">
+          <img src="assets/images/icon-carbon-neutral.svg" alt="icon-carbon-neutral.svg" />
+          <p class="font-semibold 2xl:text-[17px] text-[12px] opacity-70">
+            This is a <span class="font-bold">carbon-neutral</span> delivery
+          </p>
+        </div>
+
+        <button class="bg-orange-800 text-white font-semibold cursor-pointer w-full h-14 rounded-4xl mt-7 ConfirmOrder">
+          Confirm Order
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="fixed inset-0 z-10 bg-black/30 backdrop-blur-sm hidden blur-bg bluur"></div>
+
+    <div class="fixed top-1/2 left-1/2 z-20 transform -translate-x-1/2 -translate-y-1/2 OrderPass hidden opacity-0 scale-90 transition-all duration-300 ease-out">
+    <div class="confirmOrder bg-white flex flex-col justify-start p-5 items-start rounded-lg h-full w-full">
+      <div class="flex flex-col justify-start items-start rounded-xl">
+        <img src="assets/images/icon-order-confirmed.svg" alt="icon-order-confirmed.svg" class="w-8 h-8 mt-2" />
+        <h2 class="font-bold 2xl:text-3xl text-[25px] w-full mt-3">Order Confirmed</h2>
+        <p class="opacity-60 text-[12px] lg:text-[12px] mt-2">We Hope you enjoy your food!</p>
+      </div>
+
+      <div class="List2 flex flex-col mt-3 2xl:w-[350px] w-[250px] h-full bg-rose-50 rounded-lg">
+        <div class="List2Items flex flex-col w-full"></div>
+        <div class="flex justify-between mt-3 items-center p-3">
+          <p class="font-semibold 2xl:text-md text-sm opacity-70">Order Total</p>
+          <p class="font-bold 2xl:text-2xl -mt-1 text-lg PriceTotal"></p>
+        </div>
+      </div>
+
+      <button class="bg-orange-800 text-white font-semibold cursor-pointer w-full h-14 rounded-4xl mt-7 ConfirmOrder 2xl:w-[350px] startOrder">
+        Start New Order
+      </button>
+    </div>
+      <div class="attribution mt-3 text-center mx-auto text-white">
+         Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+        Coded by <a href="#https://www.frontendmentor.io/profile/oommmaarr" target="_blank">@oommmaarr</a>.
+      </div>
+  </div>
+
+
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
